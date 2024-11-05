@@ -1,0 +1,6 @@
+Using device: cuda
+Epoch 1, Loss: 0.4396757247494355
+Epoch 1, Loss: 0.508278706852595
+Epoch 1, Loss: 1.5475838317799924
+Best hyperparameters:  {'lr': 0.0035341914467838017, 'batch_size': 64, 'dropout_rate': 0.3464192455215407, 'l2_reg': 0.004886798361840471}
+Best test accuracy:  96.8
