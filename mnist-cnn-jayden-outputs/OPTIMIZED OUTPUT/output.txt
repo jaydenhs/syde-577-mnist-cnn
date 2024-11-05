@@ -1,0 +1,41 @@
+Using device: cuda
+Epoch 1, Loss: 0.27116032564309617
+Epoch 1, Test Accuracy: 97.55
+Epoch 2, Loss: 0.0861883123101456
+Epoch 2, Test Accuracy: 97.19
+Epoch 3, Loss: 0.06981032237068995
+Epoch 3, Test Accuracy: 98.17
+Epoch 4, Loss: 0.06564773163243906
+Epoch 4, Test Accuracy: 98.45
+Epoch 5, Loss: 0.06206668926172578
+Epoch 5, Test Accuracy: 98.96
+Epoch 6, Loss: 0.05828342521424169
+Epoch 6, Test Accuracy: 98.42
+Epoch 7, Loss: 0.05566923137007555
+Epoch 7, Test Accuracy: 98.77
+Epoch 8, Loss: 0.05319321666683342
+Epoch 8, Test Accuracy: 98.22
+Epoch 9, Loss: 0.05141053673054682
+Epoch 9, Test Accuracy: 99.32
+Epoch 10, Loss: 0.049738338813860854
+Epoch 10, Test Accuracy: 99.23
+Epoch 11, Loss: 0.04989623150198476
+Epoch 11, Test Accuracy: 99.08
+Epoch 12, Loss: 0.04784149972837109
+Epoch 12, Test Accuracy: 99.02
+Epoch 13, Loss: 0.04536771713329086
+Epoch 13, Test Accuracy: 99.27
+Epoch 14, Loss: 0.04719898698609203
+Epoch 14, Test Accuracy: 99.22
+Epoch 15, Loss: 0.04428192295495476
+Epoch 15, Test Accuracy: 99.26
+Epoch 16, Loss: 0.043416624679776236
+Epoch 16, Test Accuracy: 99.07
+Epoch 17, Loss: 0.04426027226226051
+Epoch 17, Test Accuracy: 99.12
+Epoch 18, Loss: 0.0440002143400898
+Epoch 18, Test Accuracy: 99.3
+Epoch 19, Loss: 0.041215136071353325
+Epoch 19, Test Accuracy: 99.21
+Early stopping at epoch 19
+FINAL TEST ACCURACY: 99.21

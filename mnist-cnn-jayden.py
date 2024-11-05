@@ -97,7 +97,7 @@ def objective(trial):
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=lr, weight_decay=l2_reg)
 
-    def train(model, train_loader, criterion, optimizer, test_loader, epochs=10, patience=3):
+    def train(model, train_loader, criterion, optimizer, test_loader, epochs, patience):
         model.train()
         best_accuracy = 0.0
         epochs_no_improve = 0
@@ -146,7 +146,7 @@ def objective(trial):
         return accuracy
 
     # Train and evaluate the model
-    train(model, train_loader, criterion, optimizer, test_loader, epochs=50, patience=3)
+    train(model, train_loader, criterion, optimizer, test_loader, epochs=50, patience=10)
     accuracy = evaluate(model, test_loader, criterion)
     print(f'FINAL TEST ACCURACY: {accuracy}')
     return accuracy
