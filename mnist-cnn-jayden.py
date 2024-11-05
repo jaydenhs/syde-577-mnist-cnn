@@ -77,26 +77,34 @@ def objective(trial):
     class CustomCNN(nn.Module):
         def __init__(self):
             super(CustomCNN, self).__init__()
+
+            # Convolutional layers
             layers = []
             in_channels = 1
             for _ in range(num_conv_layers):
                 layers.append(nn.Conv2d(in_channels, num_filters, kernel_size=kernel_size, stride=1, padding=1))
                 layers.append(nn.ReLU())
                 layers.append(nn.MaxPool2d(kernel_size=2, stride=2, padding=0))
+                # Update in_channels for the next iteration
                 in_channels = num_filters
             self.conv_layers = nn.Sequential(*layers)
 
-            self.fc_layers = nn.ModuleList()
+            # Calculate the number of features after the convolutional layers
             conv_output_size = 28
             for _ in range(num_conv_layers):
                 conv_output_size = (conv_output_size - kernel_size + 2 * 1) // 1 + 1  # Conv layer
                 conv_output_size = (conv_output_size - 2) // 2 + 1  # MaxPool layer
             in_features = num_filters * conv_output_size * conv_output_size
+
+            # Fully connected layers
+            self.fc_layers = nn.ModuleList()
             for _ in range(num_fc_layers - 1):
                 self.fc_layers.append(nn.Linear(in_features, fc_units))
                 self.fc_layers.append(nn.ReLU())
                 self.fc_layers.append(nn.Dropout(dropout_rate))
                 in_features = fc_units
+
+            # Add the final output layer
             self.fc_layers.append(nn.Linear(in_features, 10))
 
         def forward(self, x):
